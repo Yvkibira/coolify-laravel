@@ -38,6 +38,8 @@ WORKDIR /var/www/html
 # Copy existing application
 COPY . .
 RUN cp .env.example .env
+RUN php artisan key:generate
+RUN php artisan migrate --force
 # Install PHP dependencies
 RUN composer install --no-dev
 #RUN composer install --no-dev --no-scripts
