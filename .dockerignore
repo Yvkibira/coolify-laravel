@@ -1,0 +1,8 @@
+/vendor
+/node_modules
+/.git
+/tests
+Dockerfile
+docker-compose.yml
+README.md
+phpunit.xml
